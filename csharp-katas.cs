@@ -19,13 +19,12 @@ namespace CSharpKatas
                 }
                 count++;
             }
+
             return $"found the needle at position {index}";
         }
-
         public static int GetVowelCount2(string letters)
         {
             int vowelCount = 0;
-
             var checkVowels = new HashSet<char> { 'a', 'e', 'i', 'o', 'u' };
 
             foreach (char letter in letters.ToLower())
@@ -36,11 +35,9 @@ namespace CSharpKatas
 
             return vowelCount;
         }
-
         static string DisEmVowel(string str)
         {
             string newText = string.Empty;
-
             var checkVowels = new HashSet<char> { 'a', 'e', 'i', 'o', 'u' };
 
             foreach (char letter in str)
@@ -64,14 +61,12 @@ namespace CSharpKatas
             // We will end up with everything joined by dashes     
             return String.Join("-", parts);
         }
-
         private static void AccumVersion1()
         {
             string s = "asR";
             char[] letters = s.ToCharArray();
             var newWord = new List<string>();
             string eachWord = string.Empty;
-
 
             for (int i = 0; i < letters.Length; i++)
             {
@@ -87,7 +82,6 @@ namespace CSharpKatas
 
             Console.WriteLine(string.Join("-", newWord));
         }
-
         public static void CountOccurences()
         {
             int[] numbers = new int[12] { 5, 5, 5, 7, 7, 7, 9, 7, 9, 9, 9, 1 };
@@ -108,7 +102,6 @@ namespace CSharpKatas
                 {
                     Console.WriteLine(val.Key + " " + val.Value);
                 }
-
             }
         }
     }
