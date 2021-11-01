@@ -1,4 +1,4 @@
-public static int SquareDigits(int n)
+        public static int SquareDigits(int n)
         {
             string output = "";
             foreach (char c in n.ToString())
