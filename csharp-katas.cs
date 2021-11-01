@@ -104,7 +104,6 @@ namespace CSharpKatas
                 }
             }
         }
-
         public static int SquareDigits(int n)
         {
             string output = "";
@@ -138,6 +137,16 @@ namespace CSharpKatas
                 sb.Append(c * c);
             }
             return int.Parse(sb.ToString());
+        }
+        public static int Solution(int value)
+        {
+            int sum = 0;
+            for (int i = value-1; i > 0; i--)
+            {
+            if ((i % 5 == 0)||(i % 3 == 0))
+                sum += i;
+            }
+            return sum;
         }
     }
 }
