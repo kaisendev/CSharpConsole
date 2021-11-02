@@ -148,5 +148,31 @@ namespace CSharpKatas
             }
             return sum;
         }
+        public static string ToCamelCase(string str)
+        {
+            //var newStr = Regex.Split(str, @"[-|_]");
+            var newStr2 = str.Split(new char[] { '_', '-' });
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var item in newStr2)
+            {
+                sb.Append(item.Substring(0, 1).ToUpper() + item.Substring(1));
+            }
+            return sb.ToString();
+        }
+        public int DigitalRoot(long n)
+        {
+            char[] numbers = n.ToString().ToCharArray();
+            long sum = 0;
+
+            if (n < 10) return (int) n;
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                sum = sum + numbers[i] - '0';
+            }
+            
+            return DigitalRoot(sum);   
+        }
     }
 }
